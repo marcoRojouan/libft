@@ -6,11 +6,11 @@
 /*   By: mrojouan <mrojouan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 16:31:45 by mrojouan          #+#    #+#             */
-/*   Updated: 2025/10/13 16:36:05 by mrojouan         ###   ########.fr       */
+/*   Updated: 2025/10/13 17:40:17 by mrojouan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int isascii(int c)
+int ft_isascii(int c)
 {
     if (c < 0 || c > 127)
         return (0);
