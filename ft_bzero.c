@@ -1,18 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrojouan <mrojouan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/13 16:40:21 by mrojouan          #+#    #+#             */
-/*   Updated: 2025/10/14 11:11:39 by mrojouan         ###   ########.fr       */
+/*   Created: 2025/10/14 11:56:54 by mrojouan          #+#    #+#             */
+/*   Updated: 2025/10/14 13:24:13 by mrojouan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(int c)
+#include <unistd.h>
+
+void *memset(void *s, size_t n)
 {
-    if (c < ' ' || c > '~')
-        return (0);
-    return (1);
+    size_t i;
+    unsigned char *tmp;
+    
+    tmp = (unsigned char*) s;
+    i = 0;
+    while(i < n)
+    {    
+        tmp[i] = '\0';
+        i++;
+    }
+    return (s);
 }

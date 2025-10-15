@@ -42,12 +42,12 @@ char *ft_strndup(char *str, int len)
     return (duplicata);
 }
 
-char    **ft_split(char *str, char sep)
+char    **ft_split(char const *s, char c)
 {
     char    **tab;
     int i = 0;
     int j = 0;
-    int word_count =  ft_count_words(str, sep);
+    int word_count =  ft_count_words(s, c);
     int word_len;
     int start;
 
@@ -55,15 +55,15 @@ char    **ft_split(char *str, char sep)
     tab = malloc(sizeof(char *) * (word_count + 1));
     if(!tab)
         return (0);
-    while (str[i])
+    while (s[i])
     {
-        if (str[i] != sep)
+        if (s[i] != c)
         {
             start = i;
-            while (str[i] && str[i] != sep)
+            while (s[i] && s[i] != c)
                 i++;
             word_len = i - start;
-            tab[j] = ft_strndup(&str[start], word_len);
+            tab[j] = ft_strndup(&s[start], word_len);
             j++;
         }
         else
