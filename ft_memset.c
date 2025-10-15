@@ -6,13 +6,13 @@
 /*   By: mrojouan <mrojouan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 11:25:57 by mrojouan          #+#    #+#             */
-/*   Updated: 2025/10/14 11:34:30 by mrojouan         ###   ########.fr       */
+/*   Updated: 2025/10/15 10:49:16 by mrojouan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void *memset(void *b, int c, size_t len)
+void *ft_memset(void *b, int c, size_t len)
 {
     size_t i;
     unsigned char *tmp;

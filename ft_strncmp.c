@@ -6,11 +6,13 @@
 /*   By: mrojouan <mrojouan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 17:57:31 by mrojouan          #+#    #+#             */
-/*   Updated: 2025/10/13 18:01:57 by mrojouan         ###   ########.fr       */
+/*   Updated: 2025/10/15 10:51:32 by mrojouan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+#include <unistd.h>
+
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	unsigned int    i;
 

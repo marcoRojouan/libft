@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrojouan <mrojouan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/13 17:37:19 by mrojouan          #+#    #+#             */
-/*   Updated: 2025/10/15 10:44:51 by mrojouan         ###   ########.fr       */
+/*   Created: 2025/10/15 13:23:47 by mrojouan          #+#    #+#             */
+/*   Updated: 2025/10/15 14:17:18 by mrojouan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int c)
+#include <unistd.h>
+
+void ft_putchar_fd(char c, int fd)
 {
-    if (c >= 'A' && c <= 'Z')
-        c += 32;
-    return (c);
+    write(fd , &c, 1);
 }

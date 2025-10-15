@@ -1,18 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrojouan <mrojouan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/13 17:37:19 by mrojouan          #+#    #+#             */
-/*   Updated: 2025/10/15 10:44:51 by mrojouan         ###   ########.fr       */
+/*   Created: 2025/10/15 13:18:25 by mrojouan          #+#    #+#             */
+/*   Updated: 2025/10/15 16:59:49 by mrojouan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int c)
+#include <unistd.h>
+
+void ft_putnbr_fd(int nbr, int fd)
 {
-    if (c >= 'A' && c <= 'Z')
-        c += 32;
-    return (c);
+    char	c;
+
+	if (nbr == -2147483648)
+	{
+		write(1, "-2147483648", 11);
+		return ;
+	}
+	if (nbr < 0)
+	{
+		write(1, "-", 1);
+		nbr = nbr * -1;
+	}
+	if (nbr > 9)
+		ft_putnbr_fd(nbr / 10, fd);
+	c = (nbr % 10) + '0';
+	write(fd , &c, 1);
 }

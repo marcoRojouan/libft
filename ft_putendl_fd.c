@@ -1,18 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrojouan <mrojouan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/13 17:37:19 by mrojouan          #+#    #+#             */
-/*   Updated: 2025/10/15 10:44:51 by mrojouan         ###   ########.fr       */
+/*   Created: 2025/10/15 14:20:27 by mrojouan          #+#    #+#             */
+/*   Updated: 2025/10/15 14:22:59 by mrojouan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int c)
+void ft_putendl_fd(char *str, int fd)
 {
-    if (c >= 'A' && c <= 'Z')
-        c += 32;
-    return (c);
+    int i;
+
+    i = 0;
+    while (str[i])
+    {
+        write(fd , &str[i], 1);
+        i++;
+    }
+    write(fd , "\n", 1);
 }
