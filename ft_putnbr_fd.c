@@ -6,15 +6,15 @@
 /*   By: mrojouan <mrojouan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 13:18:25 by mrojouan          #+#    #+#             */
-/*   Updated: 2025/10/15 16:59:49 by mrojouan         ###   ########.fr       */
+/*   Updated: 2025/10/16 15:11:43 by mrojouan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-void ft_putnbr_fd(int nbr, int fd)
+void	ft_putnbr_fd(int nbr, int fd)
 {
-    char	c;
+	char c;
 
 	if (nbr == -2147483648)
 	{
@@ -29,5 +29,5 @@ void ft_putnbr_fd(int nbr, int fd)
 	if (nbr > 9)
 		ft_putnbr_fd(nbr / 10, fd);
 	c = (nbr % 10) + '0';
-	write(fd , &c, 1);
+	write(fd, &c, 1);
 }

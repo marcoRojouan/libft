@@ -6,14 +6,14 @@
 /*   By: mrojouan <mrojouan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 12:53:13 by mrojouan          #+#    #+#             */
-/*   Updated: 2025/10/15 13:03:22 by mrojouan         ###   ########.fr       */
+/*   Updated: 2025/10/16 13:54:51 by mrojouan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include "libft.h"
 
-char *strdup(const char *s)
+char *ft_strdup(const char *s)
 {
     char *duplicata;
     int i; 

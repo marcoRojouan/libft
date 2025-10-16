@@ -6,13 +6,13 @@
 /*   By: mrojouan <mrojouan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 13:23:47 by mrojouan          #+#    #+#             */
-/*   Updated: 2025/10/15 14:17:18 by mrojouan         ###   ########.fr       */
+/*   Updated: 2025/10/16 15:10:06 by mrojouan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-void ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
-    write(fd , &c, 1);
+	write(fd, &c, 1);
 }

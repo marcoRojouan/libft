@@ -6,21 +6,20 @@
 /*   By: mrojouan <mrojouan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 15:36:58 by mrojouan          #+#    #+#             */
-/*   Updated: 2025/10/15 17:10:30 by mrojouan         ###   ########.fr       */
+/*   Updated: 2025/10/16 15:10:26 by mrojouan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
-void *ft_calloc(size_t count, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
-    unsigned char *tmp;
+	unsigned char *tmp;
 
-    tmp = NULL;
-    tmp = malloc(count * size);
-    if (!tmp)
-        return (0);
-    ft_bzero(tmp, count * size);
-    return (tmp);
+	tmp = NULL;
+	tmp = malloc(count * size);
+	if (!tmp)
+		return (0);
+	ft_bzero(tmp, count * size);
+	return (tmp);
 }

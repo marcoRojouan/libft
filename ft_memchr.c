@@ -6,25 +6,24 @@
 /*   By: mrojouan <mrojouan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 15:38:13 by mrojouan          #+#    #+#             */
-/*   Updated: 2025/10/15 15:45:37 by mrojouan         ###   ########.fr       */
+/*   Updated: 2025/10/16 15:11:11 by mrojouan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-void *ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-    unsigned char *tmp_s;
-    size_t i;
+	unsigned char	*tmp_s;
+	size_t			i;
 
-    i = 0;
-    tmp_s = (unsigned char *) s;
-
-    while (i < n || tmp_s[i])
-    {
-        if (tmp_s[i] == (unsigned char) c)
-            return ((void *) &tmp_s[i]);
-        i++;    
-    }
-    return (0);
+	i = 0;
+	tmp_s = (unsigned char *)s;
+	while (i < n || tmp_s[i])
+	{
+		if (tmp_s[i] == (unsigned char)c)
+			return ((void *)&tmp_s[i]);
+		i++;
+	}
+	return (0);
 }

@@ -6,19 +6,21 @@
 /*   By: mrojouan <mrojouan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 14:20:27 by mrojouan          #+#    #+#             */
-/*   Updated: 2025/10/15 14:22:59 by mrojouan         ###   ########.fr       */
+/*   Updated: 2025/10/16 15:09:47 by mrojouan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_putendl_fd(char *str, int fd)
-{
-    int i;
+#include "libft.h"
 
-    i = 0;
-    while (str[i])
-    {
-        write(fd , &str[i], 1);
-        i++;
-    }
-    write(fd , "\n", 1);
+void	ft_putendl_fd(char *str, int fd)
+{
+	int i;
+
+	i = 0;
+	while (str[i])
+	{
+		write(fd, &str[i], 1);
+		i++;
+	}
+	write(fd, "\n", 1);
 }
