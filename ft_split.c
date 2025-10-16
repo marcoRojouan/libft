@@ -2,19 +2,15 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+        
-	+:+     */
-/*   By: mrojouan <mrojouan@student.42.fr>          +#+  +:+      
-	+#+        */
-/*                                                +#+#+#+#+#+  
-	+#+           */
-/*   Created: 2025/10/16 15:14:20 by mrojouan          #+#    #+#             */
-/*   Updated: 2025/10/16 15:14:20 by mrojouan         ###   ########.fr       */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mrojouan <mrojouan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/16 15:25:43 by mrojouan          #+#    #+#             */
+/*   Updated: 2025/10/16 15:25:43 by mrojouan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 int	ft_count_words(const char *str, char sep)
 {
