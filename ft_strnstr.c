@@ -1,18 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrojouan <mrojouan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/15 14:49:50 by mrojouan          #+#    #+#             */
-/*   Updated: 2025/10/16 15:27:32 by mrojouan         ###   ########.fr       */
+/*   Created: 2025/10/16 17:59:58 by mrojouan          #+#    #+#             */
+/*   Updated: 2025/10/16 18:12:54 by mrojouan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(const char *s1, const char *set)
+char *ft_strnstr(const char *str, const char *to_find, size_t size)
 {
-	
+    int i;
+    int j;
+
+    i = 0;
+    j = 0;
+    if (!to_find)
+        return (str);
+    while (str[i])
+    {
+        while (str[i + j] == to_find[j] && str[i + j])
+        {
+            j++;
+            if (to_find[j] == '\0')
+                return (str + i);
+        }
+        i++;
+        j = 0;
+    }
+    return (0);
 }

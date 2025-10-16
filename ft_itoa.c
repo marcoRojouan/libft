@@ -6,23 +6,28 @@
 /*   By: mrojouan <mrojouan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 14:27:01 by mrojouan          #+#    #+#             */
-/*   Updated: 2025/10/16 15:10:44 by mrojouan         ###   ########.fr       */
+/*   Updated: 2025/10/16 16:30:46 by mrojouan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 int	ft_nbrlen(int nbr)
 {
 	int	nbrCount;
 
 	nbrCount = 1;
+
 	while (!(nbr < 10) || !(nbr > -10))
 	{
 		nbr = nbr / 10;
 		nbrCount += 1;
 	}
-	return (nbrCount);
+	if (nbr < 0)
+		return (nbrCount + 1);
+	else 
+		return (nbrCount);
 }
 
 char	*ft_itoa(int nbr)
@@ -30,8 +35,7 @@ char	*ft_itoa(int nbr)
 	char	*str_nbr;
 	int		len;
 
-	len = ftNbrLen(nbr);
-	str_nbr = NULL;
+	len = ft_nbrlen(nbr);
 	if (nbr == -2147483648)
 	{
 		str_nbr = ft_strdup("-2147483648");
@@ -42,7 +46,6 @@ char	*ft_itoa(int nbr)
 		return (0);
 	if (nbr < 0)
 	{
-		len++;
 		str_nbr[0] = '-';
 		nbr *= -1;
 	}
