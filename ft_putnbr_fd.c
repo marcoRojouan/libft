@@ -6,7 +6,7 @@
 /*   By: mrojouan <mrojouan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 13:18:25 by mrojouan          #+#    #+#             */
-/*   Updated: 2025/10/17 12:01:36 by mrojouan         ###   ########.fr       */
+/*   Updated: 2025/10/17 13:53:28 by mrojouan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ void	ft_putnbr_fd(int nbr, int fd)
 
 	if (nbr == -2147483648)
 	{
-		write(1, "-2147483648", 11);
+		write(fd, "-2147483648", 11);
 		return ;
 	}
 	if (nbr < 0)
 	{
-		write(1, "-", 1);
+		write(fd, "-", 1);
 		nbr = nbr * -1;
 	}
 	if (nbr > 9)

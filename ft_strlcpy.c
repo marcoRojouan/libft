@@ -6,24 +6,28 @@
 /*   By: mrojouan <mrojouan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 10:07:27 by mrojouan          #+#    #+#             */
-/*   Updated: 2025/10/17 12:01:00 by mrojouan         ###   ########.fr       */
+/*   Updated: 2025/10/17 16:37:23 by mrojouan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, const char *str, size_t destlen)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	int	slen;
+	size_t index;
+	size_t l_len;
 
-	slen = ft_strlen(str);
-	if (slen + 1 < destlen)
-	{
-		ft_memcpy(dest, str, slen + 1);
-	}
-	else if (destlen != 0)
-	{
-		ft_memcpy(dest, str, destlen - 1);
-	}
-	return (slen);
+	index = 0;
+	l_len = 0;
+	while (src[l_len])
+		l_len++;
+	if (size == 0)
+		return (l_len);
+	while (index < size - 1 && src[index])
+		{
+			dest[index] = src[index];
+			index++;
+		}
+	dest[index] = '\0';
+	return (l_len);
 }

@@ -6,7 +6,7 @@
 /*   By: mrojouan <mrojouan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 10:50:00 by mrojouan          #+#    #+#             */
-/*   Updated: 2025/10/15 10:50:00 by mrojouan         ###   ########.fr       */
+/*   Updated: 2025/10/17 10:50:00 by mrojouan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int		ft_isprint(int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 size_t	ft_strlen(const char *str);
-void	ft_bzero(void *s, size_t n);
+void	*ft_bzero(void *s, size_t n);
 void	ft_putstr_fd(char *str, int fd);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putendl_fd(char *str, int fd);
@@ -46,5 +46,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 char	**ft_split(char const *s, char c);
 int		ft_atoi(const char *str);
 char	*ft_itoa(int nbr);
+char	*ft_strnstr(const char *str, const char *to_find, size_t size);
+void	*ft_calloc(size_t count, size_t size);
+char	*ft_strjoin(const char *s1, const char *s2);
+char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 #endif

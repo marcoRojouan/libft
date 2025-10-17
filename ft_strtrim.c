@@ -6,13 +6,13 @@
 /*   By: mrojouan <mrojouan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 14:49:50 by mrojouan          #+#    #+#             */
-/*   Updated: 2025/10/17 11:45:40 by mrojouan         ###   ########.fr       */
+/*   Updated: 2025/10/17 13:04:43 by mrojouan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	set_startend(const char *s1, const char *set, int *start, int *end)
+void	set_startend(const char *s1, const char *set, int *start, int *end)
 {
 	*start = 0;
 	while (s1[*start] && ft_strchr(set, s1[*start]))

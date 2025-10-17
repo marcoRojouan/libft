@@ -1,3 +1,9 @@
+CC = cc -Wall -Wextra -Werror
+
+NAME = libft.a
+
+ARCS = -ar rcs
+
 SRCS = ft_isalpha.c \
 ft_isdigit.c \
 ft_isalnum.c \
@@ -32,3 +38,22 @@ ft_putchar_fd.c \
 ft_putstr_fd.c \
 ft_putendl_fd.c \
 ft_putnbr_fd.c
+
+HEADER = -Ilibft.h
+
+OBJ = $(SRCS:.c=.o)
+
+all : $(NAME)
+
+$(NAME)	: $(OBJ)
+	$(ARCS) $(NAME) $(OBJ)
+
+clean :
+	rm -rf $(OBJ)
+
+fclean : clean
+	rm -rf $(NAME)
+
+re : fclean all
+
+.PHONY: all clean fclean re

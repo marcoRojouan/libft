@@ -6,7 +6,7 @@
 /*   By: mrojouan <mrojouan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 17:34:26 by mrojouan          #+#    #+#             */
-/*   Updated: 2025/10/17 11:46:47 by mrojouan         ###   ########.fr       */
+/*   Updated: 2025/10/17 12:56:42 by mrojouan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strrchr(const char *s, int c)
 	while (len > 0)
 	{
 		if (s[len - 1] == (unsigned char)c)
-			return (&s[len - 1]);
+			return ((char *)&s[len - 1]);
 		len--;
 	}
 	return (0);
