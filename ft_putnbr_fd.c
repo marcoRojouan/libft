@@ -6,7 +6,7 @@
 /*   By: mrojouan <mrojouan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 13:18:25 by mrojouan          #+#    #+#             */
-/*   Updated: 2025/10/16 15:11:43 by mrojouan         ###   ########.fr       */
+/*   Updated: 2025/10/17 12:01:36 by mrojouan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr_fd(int nbr, int fd)
 {
-	char c;
+	char	c;
 
 	if (nbr == -2147483648)
 	{

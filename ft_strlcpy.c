@@ -6,7 +6,7 @@
 /*   By: mrojouan <mrojouan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 10:07:27 by mrojouan          #+#    #+#             */
-/*   Updated: 2025/10/16 15:15:22 by mrojouan         ###   ########.fr       */
+/*   Updated: 2025/10/17 12:01:00 by mrojouan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlcpy(char *dest, const char *str, size_t destlen)
 {
-	int slen;
+	int	slen;
 
 	slen = ft_strlen(str);
 	if (slen + 1 < destlen)

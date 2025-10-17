@@ -6,13 +6,13 @@
 /*   By: mrojouan <mrojouan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 17:07:12 by mrojouan          #+#    #+#             */
-/*   Updated: 2025/10/13 17:39:02 by mrojouan         ###   ########.fr       */
+/*   Updated: 2025/10/17 11:38:21 by mrojouan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalnum(int c)
+int	ft_isalnum(int c)
 {
-    if (((c < 'a' || c > 'z') && (c < 'A' || c > 'Z')) && (c < '0' || c > '9'))
-        return (0);
-    return (1);
+	if (((c < 'a' || c > 'z') && (c < 'A' || c > 'Z')) && (c < '0' || c > '9'))
+		return (0);
+	return (1);
 }

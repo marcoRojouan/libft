@@ -6,13 +6,13 @@
 /*   By: mrojouan <mrojouan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 16:40:21 by mrojouan          #+#    #+#             */
-/*   Updated: 2025/10/14 11:11:39 by mrojouan         ###   ########.fr       */
+/*   Updated: 2025/10/17 11:41:58 by mrojouan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-    if (c < ' ' || c > '~')
-        return (0);
-    return (1);
+	if (c < ' ' || c > '~')
+		return (0);
+	return (1);
 }

@@ -14,10 +14,13 @@
 
 int	ft_count_words(const char *str, char sep)
 {
-	int count = 0;
-	int in_words = 0;
-	int i = 0;
+	int	count;
+	int	in_words;
+	int	i;
 
+	count = 0;
+	in_words = 0;
+	i = 0;
 	while (str[i])
 	{
 		if (str[i] != sep && in_words == 0)
@@ -34,8 +37,8 @@ int	ft_count_words(const char *str, char sep)
 
 char	*ft_strndup(const char *str, int len)
 {
-	char *duplicata;
-	int i;
+	int		i;
+	char	*duplicata;
 
 	duplicata = NULL;
 	duplicata = malloc(sizeof(char) * len + 1);
@@ -53,9 +56,9 @@ char	*ft_strndup(const char *str, int len)
 
 char	*just_splitting(const char *str, char sep, int *i)
 {
-	int start;
-	int word_len;
-	char *result;
+	int		start;
+	int		word_len;
+	char	*result;
 
 	result = NULL;
 	while (str[*i] == sep)
@@ -73,11 +76,14 @@ char	*just_splitting(const char *str, char sep, int *i)
 
 char	**ft_split(char const *str, char sep)
 {
-	char **tab;
-	int i = 0;
-	int j = 0;
-	int word_count = ft_count_words(str, sep);
+	char	**tab;
+	int		i;
+	int		j;
+	int		word_count;
 
+	i = 0;
+	j = 0;
+	word_count = ft_count_words(str, sep);
 	tab = NULL;
 	tab = malloc(sizeof(char *) * (word_count + 1));
 	if (!tab)

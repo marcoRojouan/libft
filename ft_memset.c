@@ -6,7 +6,7 @@
 /*   By: mrojouan <mrojouan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 11:25:57 by mrojouan          #+#    #+#             */
-/*   Updated: 2025/10/16 15:11:37 by mrojouan         ###   ########.fr       */
+/*   Updated: 2025/10/17 11:59:49 by mrojouan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	size_t i;
-	unsigned char *tmp;
+	size_t			i;
+	unsigned char	*tmp;
 
 	tmp = (unsigned char *)b;
 	i = 0;

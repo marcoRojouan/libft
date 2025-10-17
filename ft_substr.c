@@ -6,7 +6,7 @@
 /*   By: mrojouan <mrojouan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 12:47:39 by mrojouan          #+#    #+#             */
-/*   Updated: 2025/10/16 14:50:52 by mrojouan         ###   ########.fr       */
+/*   Updated: 2025/10/17 12:03:10 by mrojouan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,14 +35,4 @@ char	*ft_substr(const char *src, unsigned int start, size_t size)
 	}
 	tab[i] = '\0';
 	return (tab);
-}
-
-int	main(void)
-{
-	char str[] = "je Marco";
-	char *newstr;
-
-	newstr = ft_substr(str, 4, 5);
-	ft_putstr_fd(newstr, 1);
-	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: mrojouan <mrojouan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 14:27:01 by mrojouan          #+#    #+#             */
-/*   Updated: 2025/10/16 16:30:46 by mrojouan         ###   ########.fr       */
+/*   Updated: 2025/10/17 11:43:42 by mrojouan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,18 @@
 
 int	ft_nbrlen(int nbr)
 {
-	int	nbrCount;
+	int	nbr_count;
 
-	nbrCount = 1;
-
+	nbr_count = 1;
 	while (!(nbr < 10) || !(nbr > -10))
 	{
 		nbr = nbr / 10;
-		nbrCount += 1;
+		nbr_count += 1;
 	}
 	if (nbr < 0)
-		return (nbrCount + 1);
-	else 
-		return (nbrCount);
+		return (nbr_count + 1);
+	else
+		return (nbr_count);
 }
 
 char	*ft_itoa(int nbr)

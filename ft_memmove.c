@@ -6,7 +6,7 @@
 /*   By: mrojouan <mrojouan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 13:39:53 by mrojouan          #+#    #+#             */
-/*   Updated: 2025/10/16 15:11:32 by mrojouan         ###   ########.fr       */
+/*   Updated: 2025/10/17 11:59:22 by mrojouan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char *tmp_dest;
-	unsigned char *tmp_src;
-	size_t i;
+	unsigned char	*tmp_dest;
+	unsigned char	*tmp_src;
+	size_t			i;
 
 	tmp_dest = (unsigned char *)dest;
 	tmp_src = (unsigned char *)src;

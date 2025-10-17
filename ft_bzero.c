@@ -6,7 +6,7 @@
 /*   By: mrojouan <mrojouan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 11:56:54 by mrojouan          #+#    #+#             */
-/*   Updated: 2025/10/16 15:09:52 by mrojouan         ###   ########.fr       */
+/*   Updated: 2025/10/17 11:44:25 by mrojouan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_bzero(void *s, size_t n)
 {
-	size_t i;
-	unsigned char *tmp;
+	size_t			i;
+	unsigned char	*tmp;
 
 	tmp = (unsigned char *)s;
 	i = 0;

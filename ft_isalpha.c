@@ -6,13 +6,13 @@
 /*   By: mrojouan <mrojouan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 16:18:15 by mrojouan          #+#    #+#             */
-/*   Updated: 2025/10/13 17:40:14 by mrojouan         ###   ########.fr       */
+/*   Updated: 2025/10/17 11:39:45 by mrojouan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
-    if ((c < 'a' || c > 'z') && (c < 'A' || c > 'Z'))
-        return (0);
-    return (1);
+	if ((c < 'a' || c > 'z') && (c < 'A' || c > 'Z'))
+		return (0);
+	return (1);
 }

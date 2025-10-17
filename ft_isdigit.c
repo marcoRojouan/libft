@@ -6,13 +6,13 @@
 /*   By: mrojouan <mrojouan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 15:53:44 by mrojouan          #+#    #+#             */
-/*   Updated: 2025/10/13 17:40:19 by mrojouan         ###   ########.fr       */
+/*   Updated: 2025/10/17 11:41:29 by mrojouan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-    if (c < '0' || c > '9')
-        return (0);
-    return (1);
+	if (c < '0' || c > '9')
+		return (0);
+	return (1);
 }
