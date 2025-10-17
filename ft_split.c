@@ -77,6 +77,7 @@ char	*just_splitting(const char *str, char sep, int *i)
 char	**ft_split(char const *str, char sep)
 {
 	char	**tab;
+	char	*word;
 	int		i;
 	int		j;
 	int		word_count;
@@ -90,8 +91,12 @@ char	**ft_split(char const *str, char sep)
 		return (0);
 	while (str[i])
 	{
-		tab[j] = just_splitting(str, sep, &i);
-		j++;
+		word = just_splitting(str, sep, &i);
+		if (word)
+		{
+			tab[j] = word;
+			j++;
+		}
 	}
 	tab[j] = NULL;
 	return (tab);

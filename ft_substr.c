@@ -18,15 +18,17 @@ char	*ft_substr(const char *src, unsigned int start, size_t size)
 	size_t	i;
 	size_t	srclen;
 
-	tab = NULL;
-	srclen = ft_strlen(src);
-	if (start > srclen)
-		return (tab);
+	srclen = ft_strlen(src);	
 	if (size > srclen + start)
-		size = srclen + start;
+		size = srclen - start;
 	tab = malloc(sizeof(char) * (size + 1));
 	if (!tab)
 		return (0);
+	if (start > srclen)
+	{
+		tab[0] = '\0';
+		return (tab);
+	}
 	i = 0;
 	while (i < size)
 	{
