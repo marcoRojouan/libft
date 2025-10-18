@@ -6,7 +6,7 @@
 /*   By: mrojouan <mrojouan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 12:47:39 by mrojouan          #+#    #+#             */
-/*   Updated: 2025/10/17 12:03:10 by mrojouan         ###   ########.fr       */
+/*   Updated: 2025/10/18 12:45:08 by mrojouan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_substr(const char *src, unsigned int start, size_t size)
 
 	srclen = ft_strlen(src);	
 	if (size > srclen + start)
-		size = srclen - start;
+		size = srclen + start;
 	tab = malloc(sizeof(char) * (size + 1));
 	if (!tab)
 		return (0);
