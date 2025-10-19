@@ -11,6 +11,19 @@
 /* ************************************************************************** */
 #include "libft.h"
 
+void free_tab(char **tab, int j)
+{
+	int i;
+
+	i = 0;
+	while (i < j)
+	{
+		free(tab[i]);
+		i++;
+	}
+	free(tab);
+}
+
 int	wordcounts(char const *str, char sep)
 {
 	int i;
@@ -20,26 +33,88 @@ int	wordcounts(char const *str, char sep)
 	count = 0; 
 	while (str[i])
 	{
-		if (str[i] != sep && (i = 0 || i - 1 == sep))
+		if ((str[i] != sep) && (i == 0 || i - 1 == sep))
 			count++;
 		i++;
 	}
 	return (count);
 }
-char	**ft_split(char const *str, char sep)
+
+char *duplicate_word(char const *str, char sep)
+{
+	char	*dup;
+	int		i;
+	int 	len;
+
+	len = 0;
+	while (str[len] && str[len] != sep)
+		len++;
+	dup = malloc(sizeof(char) * len + 1);
+	if (!dup)
+		return (0);
+	i = 0;
+	while (i < len)
+	{
+		dup[i] = str[i];
+		i++;
+	}
+	dup[i] = '\0';
+	return (dup);
+}
+
+int	fill_tab(char const *str, char sep, char **tab)
 {
 	int	i;
 	int	j;
-	char **tab;
 
 	i = 0;
 	j = 0;
-	tab = malloc(sizeof(char *) * wordcounts(str, sep));
-	if (!tab)
-		return (NULL);
 	while (str[i])
-		if (str[i] != sep && (i = 0 || i - 1 == sep))
-			tab[j] = duplicate_word(str, sep);
-		
+	{
+		if (str[i] != sep && (i == 0 || str[i - 1] == sep))
+		{
+			tab[j] = duplicate_word(str + i, sep);
+				if(!tab[j])
+				{
+					free_tab(tab, j);
+					return (0);
+				}
+			j++;
+		}
+		i++;
+	}
+	tab[j] = 0;
+	return (1);
+}
 
+char	**ft_split(char const *str, char sep)
+{
+	char **tab;
+	int word_number;
+
+	if (!str)
+		return (0);
+	word_number = wordcounts(str, sep);
+	tab = malloc(sizeof(char *) * word_number + 1);
+	if (!tab)
+		return (0);
+	if (!fill_tab(str, sep, tab))
+		return (0);
+	return (tab);
+}
+
+int main (int ac, char **av)
+{
+	(void)ac;
+	int i;
+	char **tab;
+	
+	i = 0;
+	tab = ft_split(av[1], ' ');
+	while (tab[i])
+	{
+		ft_putstr_fd(tab[i], 1);
+		ft_putchar_fd('\n', 1);
+		i++;
+	}
 }
