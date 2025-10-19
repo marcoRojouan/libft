@@ -6,11 +6,11 @@
 /*   By: mrojouan <mrojouan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 17:20:03 by mrojouan          #+#    #+#             */
-/*   Updated: 2025/10/17 11:34:30 by mrojouan         ###   ########.fr       */
+/*   Updated: 2025/10/18 12:00:15 by mrojouan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	i;
 	int	multi;
