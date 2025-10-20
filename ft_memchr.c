@@ -6,7 +6,7 @@
 /*   By: mrojouan <mrojouan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 15:38:13 by mrojouan          #+#    #+#             */
-/*   Updated: 2025/10/16 15:11:11 by mrojouan         ###   ########.fr       */
+/*   Updated: 2025/10/20 12:47:26 by mrojouan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,3 @@ void	*ft_memchr(const void *str, int occ, size_t n)
 	}
 	return (NULL);
 }
-
