@@ -39,21 +39,35 @@ ft_putstr_fd.c \
 ft_putendl_fd.c \
 ft_putnbr_fd.c
 
+BNS = ft_lstnew_bonus.c
+# ft_lstadd_front_bonus.c \
+# ft_lstsize_bonus.c \
+# ft_lstlast_bonus.c \
+# ft_lstadd_back_bonus.c \
+# ft_lstdelone_bonus.c \
+# ft_lstclear_bonus.c \
+# ft_lstiter_bonus.c
+
 HEADER = -Ilibft.h
 
 OBJ = $(SRCS:.c=.o)
+
+OBJB = $(BNS:.c=.o)
 
 all : $(NAME)
 
 $(NAME)	: $(OBJ)
 	$(ARCS) $(NAME) $(OBJ)
 
+bonus : $(OBJ) $(OBJB)
+	$(ARCS) $(NAME) $(OBJ) $(OBJB)
+
 clean :
-	rm -rf $(OBJ)
+	rm -rf $(OBJ) $(OBJB)
 
 fclean : clean
 	rm -rf $(NAME)
 
 re : fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean bonus fclean re 
