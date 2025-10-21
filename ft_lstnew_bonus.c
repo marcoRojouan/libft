@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mrojouan <mrojouan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 17:38:42 by mrojouan          #+#    #+#             */
-/*   Updated: 2025/10/20 23:19:40 by marvin           ###   ########.fr       */
+/*   Updated: 2025/10/21 11:16:27 by mrojouan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,24 +25,24 @@ t_list	*ft_lstnew(void *content)
 	return (new);
 }
 
-int main(void)
-{
-	t_list *Francis;
-	t_list *Patrick;
-	t_list *Rene;
-	t_list *bagarre;
+// int main(void)
+// {
+// 	t_list *Francis;
+// 	t_list *Patrick;
+// 	t_list *Rene;
+// 	t_list *bagarre;
 
-	Francis = ft_lstnew("Francis");
-	Patrick = ft_lstnew("Patrick");
-	Rene = ft_lstnew("Renai");
-	bagarre = ft_lstnew("bagarre");
-	ft_lstadd_front(&Francis, Patrick);
-	ft_lstadd_front(&Francis, Rene);
-	ft_lstadd_back(&Francis, bagarre);
+// 	Francis = ft_lstnew("Francis");
+// 	Patrick = ft_lstnew("Patrick");
+// 	Rene = ft_lstnew("Renai");
+// 	bagarre = ft_lstnew("bagarre");
+// 	ft_lstadd_front(&Francis, Patrick);
+// 	ft_lstadd_front(&Francis, Rene);
+// 	ft_lstadd_back(&Francis, bagarre);
 
-	while (Francis)
-	{
-		puts(Francis->content);
-		Francis = Francis->next;
-	}
-}
+// 	while (Francis)
+// 	{
+// 		puts(Francis->content);
+// 		Francis = Francis->next;
+// 	}
+// }
